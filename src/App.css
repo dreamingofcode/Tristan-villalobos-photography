@@ -1,7 +1,41 @@
 .App {
   text-align: center;
+  ;
 }
+body{
+  background-image: url('./firsthomeimage.jpg');
+  background-position: auto;
+}
+/* .login_container{
+  background-color: saddlebrown;
+  height: 75px;
+} */
+.login_form{
+  display: inline-block;
+  background-color: salmon;
+  width: 50px;
+  height: 50px;
+  text-align: left;
+  margin: auto;
+  margin-top: 50px;
+   padding: 100px 360px 200px 160px; 
 
+  border-width: 460px;
+  border-color: seagreen;
+  
+}
+button{
+  text-align: center;
+}
+h1{
+    font-size: 33px;
+}
+.login_header{
+
+  background-color: whitesmoke;
+  padding:10px;
+  
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
