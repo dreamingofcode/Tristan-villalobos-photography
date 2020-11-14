@@ -1,69 +1,133 @@
-import React, {Component} from 'react'
-import styled from 'styled-components';
-//import Login from '../components/Login'
-import Home from '../components/Home'
-import {Link} from 'react-router-dom'
-import { NavigationBar } from '../components/NavigationBar';
-import logo2 from '../images/logo2.png'
-import {Jumbotron as Jumbo, Container, Row,Col,Image,Button} from 'react-bootstrap'
-const GridWrapper = styled.div`
-.Jumbo{
-background-image: url('../images/firsthomeimage.jpg')
-// background-size: cover;
-  display: grid;
-  grid-gap: 10px;
-  margin-top: 1em;
-  margin-left: 1em;
-  margin-right: 1em;
-  grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: minmax(25px, auto);
-  opacity: .8
-}
-  .services{
-    background-color:white;
-    // opacity: 1
+import React, { Component } from 'react';
+import plant from '../images/plant1.png';
+import plant2 from '../images/plant2.png';
+import chicago from '../images/chicago.png';
+import skyline from '../images/skyline.png';
+import tristan from '../images/tristan-headshot.jpg';
+import gallery from '../images/gallery-1.jpg';
+import gallery2 from '../images/gallery-2.jpg';
+import gallery3 from '../images/gallery-3.jpg';
+import gallery4 from '../images/gallery-4.jpg';
+import telephone from '../images/twitter 1.svg';
+import email from '../images/youtube-symbol 1.svg';
+import instagram from '../images/instagram 1.svg';
+import contact from '../images/youtube-symbol 1.svg';
+import jordan from '../images/jordan.png';
+import camera from '../images/camera-icon.png';
+import cloud from '../images/cloud.png';
+export default class HomePage extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <header className="main-head"></header>
+        <main>
+          <section className="hero">
+            <div className="hero-introduction flex">
+              <img src={camera} alt="camera icon" />
+              <h2>
+                Tristan Villalobos <br />
+                Photography
+              </h2>
+              <p>
+                With an admiration for the abstract and the collision of urban
+                and rural forms, Tristan is on a mission to capture the chaos
+                within the urban jungles of Chicago.
+              </p>
+              <a href="#gallery">Gallery</a>
+            </div>
+            <div className="hero-images">
+              <img
+                className="hero-tristan"
+                src={skyline}
+                alt="picture of tristan villalobos"
+              />
 
+              <img src={plant} alt="" className="plant1 plant" />
+              <img src={plant2} alt="" className="plant2 plant" />
+            </div>
+          </section>
+          <section className="about" id="about">
+            <div className="about-image">
+              <h5>CHICAGO CONCRETE JUNGLE</h5>
+              <img src={chicago} alt="chicago" />
+              <div className="cloud">
+                <img src={cloud} alt="cloud" />
+              </div>
+            </div>
+            <div className="about-text flex" id="work">
+              <h2>Tristan Villalobos</h2>
+              <img src={tristan} alt="headshot" />
+              <div className="about-life">
+                <h3>Bio</h3>
+                <p>
+                  As a current law enforcement officer, Tristan has grown to love
+                  this city and is eager to capture it through phoptography for the world to see.
+                  Once only a hobbyst, he is ready to turn his passion into something more serious.
+                
+                </p>
+              </div>
+              <div className="about-work">
+                <h3>Work</h3>
+                <p>
+                 Tristan has served 
+                </p>
+              </div>
+              <div className="about-contact">
+                <h3>Get in touch</h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Voluptas, maxime reprehenderit. Assumenda necessitatibus id
+                  consectetur asperiores harum dolore nihil fuga?
+                </p>
+              </div>
+            </div>
+          </section>
+          <div className="gallery" id="gallery">
+            <header className="gallery-head">
+              <h2>Quality Photography</h2>
+              <p>My work pictures that I took</p>
+            </header>
+            <img className="gallery1" src={gallery} alt="man in suit" />
+            <img className="gallery2" src={gallery2} alt="lady in coat" />
+            <img className="gallery3" src={gallery3} alt="lady in t-shirt" />
+            <img className="gallery4" src={gallery4} alt="lady in jacket" />
+          </div>
+          <section className="contact" id="contact">
+            <div className="form-wrapper flex">
+              <h2>
+                Get in <br />
+                <span> touch.</span>
+              </h2>
+              <form>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" required />
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+            <img src={contact} alt="tristan-villalobos" />
+          </section>
+        </main>
+        <footer>
+          <h4>tristan villalobos &copy; 2019</h4>
+          <ul>
+            <li>
+              <a href="#">
+                <img src={telephone} alt="youtube-social-media" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src={email} />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src={instagram} />
+              </a>
+            </li>
+          </ul>
+        </footer>
+      </React.Fragment>
+    );
   }
-`;
- export default class HomePage extends Component{
-render(){
-  return( 
-  <React.Fragment>
-
-  <NavigationBar />
-    <Container>
-      
-        <GridWrapper>
-      <Jumbo className="Jumbo">
-          <Image src={logo2} circle className="logo"/>
-        <h3>Drywall specialist providing commercial and residetial excellence in craftsmanship since 2008</h3>
-      </Jumbo>
-      <Row className="show-grid text-center">
-        <Col xs={12} sm={4} className="pwerson-wrapper">
-        <div className="services">
-          <h1>Framing</h1>
-          
-          <p>Carpentry is a skilled trade and a craft in which the primary work performed is the cutting, shaping and installation of building materials during the construction of buildings, ships, timber bridges, concrete formwork, etc. Carpenters traditionally worked with natural wood and did the rougher work such as framing, but today many other materials are also used[1] and sometimes the finer trades of cabinetmaking and furniture building are considered carpentry. In the United States, 98.5% of carpenters are male, and it was the fourth most male-dominated occupation in the country in 1999. In 2006 in the United States, there were about 1.5 million carpentry positions. Carpenters are usually the first tradesmen on a job and the last to leave.[2] Carpenters normally framed post-and-beam buildings until the end of the 19th century; now this old fashioned carpentry is called timber framing. Carpenters learn this trade by being employed through an apprenticeship training—normally 4 years—and qualify by successfully completing that country's work experience other than a formal training program, which may be the case in many places.</p>
-        </div>
-        </Col>
-        <Col xs={12} sm={4} className="pwerson-wrapper">
-        <div className="services">
-          <h1>Drywall</h1>
-          
-          <p> in the United States, there were about 1.5 million carpentry positions. Carpenters are usually the first tradesmen on a job and the last to leave.[2] Carpenters normally framed post-and-beam buildings until the end of the 19th century; now this old fashioned carpentry is called timber framing. Carpenters learn this trade by being employed through an apprenticeship training—normally 4 years—and qualify by successfully completing that country's work experience other than a formal training program, which may be the case in many placesreeeeeretteer</p>
-        </div>
-        </Col>
-        <Col xs={12} sm={4} className="pwerson-wrapper">
-        <div className="services">
-          <h1>Painting</h1>
-          
-          <p>reeeeer in the United States, there were about 1.5 million carpentry positions. Carpenters are usually the first tradesmen on a job and the last to leave.[2] Carpenters normally framed post-and-beam buildings until the end of the 19th century; now this old fashioned carpentry is called timber framing. Carpenters learn this trade by being employed through an apprenticeship training—normally 4 years—and qualify by successfully completing that country's work experience other than a formal training program, which may be the case in many placesetteer</p>
-        </div>
-        </Col>
-      </Row>
-      </GridWrapper>
-    </Container>
-  </React.Fragment>
-  )
 }
- } 
