@@ -313,6 +313,11 @@ z-index: -1;
   display: flex;
   flex-wrap: wrap;
 }
+.contact img{
+  height: 700px;
+  max-width: 600px;
+  margin-right: -54rem;
+}
 .form-wrapper {
   flex: 3 1 40rem;
 }
@@ -363,6 +368,9 @@ footer ul {
 footer h4 {
   flex: 3 1 40rem;
   font-size: calc(1.4rem + 1vw);
+}
+footer img{
+  height: 60px;
 }
 
 button:focus {
