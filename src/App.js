@@ -1,9 +1,10 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import HomePage from './containers/HomePage';
+import HomePage from './HomePage';
+import mail from './images/mail.png';
+import telephone from './images/telephone2.png';
 
 function App() {
   return (
@@ -30,15 +31,27 @@ function App() {
 
       <Router>
         <Switch>
-          {/* <Route exact path="/" component={Home} /> */}
           <Route path="/" component={HomePage} />
-          {/* <Route path="/about" component={About} />
-          <Route path="/login" component={Login} />
-          <Route exact path="/admin" component={Admin} />
-          <Route path="/admin-create" component={AdminForm} />
-          <Route component={NoMatch} /> */}
         </Switch>
       </Router>
+      <footer>
+        <h4>Tristan Villalobos &copy; 2020</h4>
+        <ul>
+          <li>
+            <a href="tel:3125130834">
+              <img src={telephone} alt="telephone icon" />
+            </a>
+            <p> (312)-513-0834</p>
+          </li>
+          <li>
+            <a href="mailto:tvee267@yahoo.com" target="blank">
+              <img src={mail} alt="email symbol" />
+            </a>
+            <p>tvee267@yahoo.com</p>
+          </li>
+          <li></li>
+        </ul>
+      </footer>
     </div>
   );
 }
