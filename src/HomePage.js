@@ -15,7 +15,6 @@ export default class HomePage extends Component {
   render() {
     return (
       <React.Fragment>
-        <header className="main-head"></header>
         <main>
           <section className="hero">
             <div className="hero-introduction flex">
@@ -35,7 +34,7 @@ export default class HomePage extends Component {
               <img
                 className="hero-tristan"
                 src={skyline}
-                alt="picture of tristan villalobos"
+                alt="Chicago cityscape"
               />
 
               <img src={plant} alt="" className="plant1 plant" />
@@ -52,7 +51,7 @@ export default class HomePage extends Component {
             </div>
             <div className="about-text flex" id="work">
               <h2>Tristan Villalobos</h2>
-              <img src={tristan} alt="headshot" />
+              <img src={tristan} alt="Tristan's headshot" />
               <div className="about-life">
                 <h3>Bio</h3>
                 <p>
@@ -88,10 +87,10 @@ export default class HomePage extends Component {
               <h2>Quality Photography</h2>
               <p>More coming soon!</p>
             </header>
-            <img className="gallery1" src={gallery} alt="man in suit" />
-            <img className="gallery2" src={gallery2} alt="lady in coat" />
-            <img className="gallery3" src={gallery3} alt="lady in t-shirt" />
-            <img className="gallery4" src={gallery4} alt="lady in jacket" />
+            <img className="gallery1" src={gallery} alt="chicago bean" />
+            <img className="gallery2" src={gallery2} alt="chicago cityscape" />
+            <img className="gallery3" src={gallery3} alt="chicago museum" />
+            <img className="gallery4" src={gallery4} alt="chicago" />
           </div>
           <section className="contact" id="contact">
             <img src={jordan} alt="tristan-villalobos" />
@@ -101,7 +100,7 @@ export default class HomePage extends Component {
                 <span> touch.</span>
               </h2>
               <form>
-                <label for="email">Your Email:</label>
+                <label htmlFor="email">Your Email:</label>
                 <input type="email" id="email" required />
                 <button type="submit">Submit</button>
               </form>
