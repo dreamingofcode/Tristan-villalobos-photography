@@ -1,11 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import HomePage from './HomePage';
 import mail from './images/mail.png';
 import telephone from './images/telephone2.png';
-import Functions from './function'
+import Functions from './function';
 function App() {
   return (
     <div className="App">
@@ -15,13 +14,19 @@ function App() {
           <h5 id="logo">Tristan Villalobos Photography</h5>
           <ul className="nav-links">
             <li>
-              <a className="link" href="#about">About</a>
+              <a className="link" href="#about">
+                About
+              </a>
             </li>
             <li>
-              <a className="link" href="#work">Work</a>
+              <a className="link" href="#work">
+                Work
+              </a>
             </li>
             <li>
-              <a className="link" href="#contact">Contact</a>
+              <a className="link" href="#contact">
+                Contact
+              </a>
             </li>
           </ul>
           <div className="burger">
@@ -31,11 +36,7 @@ function App() {
           </div>
         </nav>
       </header>
-      <Router>
-        <Switch>
-          <Route path="/" component={HomePage} />
-        </Switch>
-      </Router>
+      <HomePage />
       <footer>
         <h4>Tristan Villalobos &copy; 2020</h4>
         <ul>
