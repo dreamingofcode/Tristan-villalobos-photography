@@ -5,30 +5,32 @@ import './App.css';
 import HomePage from './HomePage';
 import mail from './images/mail.png';
 import telephone from './images/telephone2.png';
-
+import Functions from './function'
 function App() {
   return (
     <div className="App">
-      <nav>
-        <h5 id="logo">Tristan Villalobos Photography</h5>
-        <ul class="nav-links">
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#work">Work</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-        <div class="burger">
-          <span class="line1"></span>
-          <span class="line2"></span>
-          <span class="line3"></span>
-        </div>
-      </nav>
-
+      {/* <Functions/> */}
+      <header className="main-head">
+        <nav>
+          <h5 id="logo">Tristan Villalobos Photography</h5>
+          <ul className="nav-links">
+            <li>
+              <a className="link" href="#about">About</a>
+            </li>
+            <li>
+              <a className="link" href="#work">Work</a>
+            </li>
+            <li>
+              <a className="link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <div className="burger">
+            <span className="line1"></span>
+            <span className="line2"></span>
+            <span className="line3"></span>
+          </div>
+        </nav>
+      </header>
       <Router>
         <Switch>
           <Route path="/" component={HomePage} />

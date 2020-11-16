@@ -389,10 +389,14 @@ input:focus {
     padding: 5rem 3rem;
   }
   
+  .cloud{
+    display: none;
+  }
   /* BURGER THING */
   .burger {
     position: relative;
-    display: block;
+    /* display: block; */
+    display: none;
     cursor: pointer;
   }
   .burger span {
